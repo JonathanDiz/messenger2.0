@@ -46,11 +46,10 @@ function ChatInput() {
       return [data.message, ...messages!];
     };
 
-    await mutate(uploadMessageToUpstash!,
-      {
-        optimisticData: [message, ...messages!],
-        rollbackOnError: true,
-      });
+    await mutate(uploadMessageToUpstash!, {
+      optimisticData: [message, ...messages!],
+      rollbackOnError: true,
+    });
   };
 
   return (
