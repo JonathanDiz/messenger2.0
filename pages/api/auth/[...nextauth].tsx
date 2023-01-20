@@ -10,11 +10,9 @@ export const authOptions = {
   // ... add more providers here
 ],
   secret: process.env.NEXTaUTH_SECRET!,
-  page: {
+  pages: {
     signIn: '/auth/signin',
   }
 }
 export default NextAuth(authOptions)
 
-// FACEBOOK_CLIENT_ID=694948035439943
-// FACEBOOK_CLIENT_SECRET=●●●●●●●●
